@@ -1,7 +1,0 @@
-{
-  "type":     "azure",
-  "model":    "gpt-4-32k",
-  "endpoint": "https://der-aic-devtest-openai-labs-eus.openai.azure.com/",
-  "apikey":   "53bf2c61bbf543fc8ec9f149373dbaa1", 
-  "org":      ""
-}

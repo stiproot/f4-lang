@@ -46,15 +46,18 @@ public sealed class DecisionTreeFlow(
 
 	public async Task RunAsync(CancellationToken cancellationToken)
 	{
-        IAgentConfiguration configuration = 
+        var agentMetadata = new AgentMetadata { SysPrompt = "What does CQRS stand for?" };
+        var agentMemory = this._semanticTextMemoryFactory.Create().ToAgentMemory(this._objMapper);
+
+        IAgentConfiguration agentConfiguration = 
             new AgentConfigurationBuilder()
-                .AddMetadata(new AgentMetadata { SysPrompt = "What does CQRS stand for?" })
-                .AddMemory(this._semanticTextMemoryFactory.Create().ToAgentMemory(this._objMapper))
+                .AddMetadata(agentMetadata)
+                .AddMemory(agentMemory)
                 .Build();
 
 		var mn = this._stateManager
 			.Root<IFactory<IAgentConfiguration, IAgent>>(configure => configure
-                .MatchArg(configuration)
+                .MatchArg(agentConfiguration)
             )
 			.Root<IAgent>(configure => configure
                 .PreProcess(a => (a as IAgent)!.Configure())

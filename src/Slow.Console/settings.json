@@ -1,9 +1,0 @@
-{
-    "modelOptions":{
-        "type":     "azure",
-        "model":    "gpt-4-32k",
-        "endpoint": "",
-        "apikey":   "", 
-        "org":      ""
-    }
-}
