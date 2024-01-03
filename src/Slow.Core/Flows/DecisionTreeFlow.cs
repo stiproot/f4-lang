@@ -1,5 +1,7 @@
 using Microsoft.SemanticKernel.Memory;
 using Slow.Core.Extensions;
+using PromiseTree.Abstractions;
+using PromiseTree.Core;
 
 #pragma warning disable SKEXP0011, SKEXP0022, SKEXP0052, SKEXP0003
 

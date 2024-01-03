@@ -26,7 +26,8 @@ public static class ServiceCollectionExtensions
 
     public static IServiceCollection AddSlowConfiguration(this IServiceCollection @this)
     {
-        var configuration = @this.AddConfigurations(configurations: new[] { "settings.json" });
+        // var configuration = @this.AddConfigurations(configurations: new[] { "settings.json" });
+        var configuration = @this.AddConfigurations();
         @this.ConfigureOptions<AgentOptions>(configuration, nameof(AgentOptions));
         @this.ConfigureOptions<ModelOptions>(configuration, nameof(ModelOptions));
         return @this;

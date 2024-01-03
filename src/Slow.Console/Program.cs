@@ -32,13 +32,15 @@ var memory = new AgentMemory(semanticTextMemory, mapper);
 const string prompt = @"
     You are an interactive solution architect.
 
-    If you need more information, here are some options available to you:
+    If you need more information, the following functions are available to you:
     {{$options}}
     ---
     Chat History:
     {{ConversationSummaryPlugin.SummarizeConversation $history}}
     ---
     User: {{$userInput}}
+    ---
+    If you would like to invoke an function, only return the function name, prefixed with option. Example: `function: REQUEST_MORE_INFORMATION`.
     ";
 var metadata = new AgentMetadata { SysPrompt = prompt, Options = new[] { "REQUEST_MORE_INFORMATION" } };
 
