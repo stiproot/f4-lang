@@ -1,0 +1,42 @@
+type: Programme
+title: Sell Promotions manager to at least one iGaming customer (Not an existing customer) (Company KR)
+children:
+  - type: Medium Project
+    title: 30% player uplift as measured by an increase in Deposits (BU)
+    children:
+      - type: Epic
+        title: Build models to achieve 6 Business cases (Genisys + ZenAI)
+      - type: Epic
+        title: Achieve uplift through enabling Rapid iteration of models
+      - type: Epic
+        title: Data Management
+      - type: Epic
+        title: Leverage Causal AI
+  - type: Medium Project
+    title: Improve Message effectiveness (BU)
+    children:
+      - type: Epic
+        title: Build an SDK that can be used in both a 3rd Party or Traditional Operator Lobby by 15 Sep (Wakanda)
+      - type: Epic
+        title: Build a message inbox system for Titan with a subtle message (Toast) by 31 Jul (Wakanda)
+      - type: Epic
+        title: Operational Work
+  - type: Medium Project
+    title: Future Incentives (BU)
+    children:
+      - type: Epic
+        title: Productionize Raffle Mania system (Cyberdyne)
+      - type: Epic
+        title: Package RaffleMania to staging to start SOAK testing & pipe real data to it
+      - type: Epic
+        title: Build Player Facing UI  for RaffleMania to enhance player experience and meet regulation requirements
+      - type: Epic
+        title: Mahi - one of
+      - type: Epic
+        title: Gamification
+      - type: Epic
+        title: Random Prizer
+      - type: Epic
+        title: Bonus by 24 June (TB)
+  - type: Medium Project
+    title: Go To Market Strategy (Emm)

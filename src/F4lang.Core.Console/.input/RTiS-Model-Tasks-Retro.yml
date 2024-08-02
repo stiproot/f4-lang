@@ -1,0 +1,23 @@
+- story: Problem statement kick-off
+    - tasks:
+        - title: Problem statement meeting
+- story: Data acquisition
+    - tasks:
+        - title: Identify relevant tables
+        - title: Create temp tables for required data
+- story: Data analysis
+    - tasks:
+        - title: Initial data exploration
+        - title: Identify and analyse high level features 
+        - title: Explore different formulations of the target
+- story: Feedback analysis findings
+    - tasks:
+        - title: Problem statement meeting
+
+
+- story: Outcome definition
+    - tasks:
+        - title: Obtain initial definition of goals
+- story: Data preparation
+    - tasks:
+        - title: Write up Yield demand form for eventinsight_seg_all_wagers to silver

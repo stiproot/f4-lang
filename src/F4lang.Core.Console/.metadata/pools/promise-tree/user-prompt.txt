@@ -1,0 +1,4 @@
+I would like a Web API, that consists of a single endpoint, that accepts a POST request.
+The endpoint will return a weather forecast, that is stored in a database.
+Use SOLID principles.
+The code must be written to the following file `~/f4lang/src/F4lang.Console/.output/weather.cs`.

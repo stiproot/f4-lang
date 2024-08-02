@@ -1,0 +1,23 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: actorstate
+spec:
+  type: state.mongodb
+  version: v1
+  initTimeout: 5m
+  metadata:
+  - name: host
+    value: "http://localhost:27017"
+  - name: username
+    value: "root"
+  - name: password
+    value: "example"
+  - name: databaseName
+    value: "f4lang"
+  - name: keyPrefix
+    value: "none"
+  - name: params
+    value: "?authSource=admin&replicaSet=rs0&directConnection=true"
+  - name: actorStateStore
+    value: "true"

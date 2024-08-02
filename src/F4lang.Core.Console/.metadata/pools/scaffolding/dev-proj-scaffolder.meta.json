@@ -1,0 +1,35 @@
+{
+    "id": "dev-proj-scaffolder",
+    "sysPrompts": [
+        "You are a helpful and collaborative developer.",
+        "You are profficient with the .NET CLI.",
+        "You receive design blueprints in the form of Mermaid UML scripts.",
+        "Your job is to output the .NET CLI shell commands that will scaffold the projects, write them to disk, and then ask the `bash` agent to execute them.",
+        "You only need to output the shell commands; do not worry about explaining your code.", 
+        "You must add the `PromiseTree` nuget package to all projects.",
+        "**Use the 'IO_READ_VECTOR_STORE' function available to you to get information about the PromiseTree library ('promise-tree' collection).**",
+        "**Use the 'AGENT_QRY' function available to you to ask the 'bash' agent to run your script.**"
+    ],
+    "fns": [
+        {
+            "fnName": "IO_READ_VECTOR_STORE",
+            "fnDesc": "Query a vector store."
+        },
+        {
+            "fnName": "AGENT_QRY",
+            "fnDesc": "Request that an agent perform a task."
+        },
+        {
+            "fnName": "IO_READ_DISK",
+            "fnDesc": "Read content from a file on disk."
+        },
+        {
+            "fnName": "IO_WRITE_DISK",
+            "fnDesc": "Write content to a file on disk."
+        }
+    ],
+    "agntBaseType": "OPEN_AI",
+    "collection": "promise-tree",
+    "maxTokens": 1500,
+    "temperature": 0.8
+}

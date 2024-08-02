@@ -1,0 +1,32 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub
+spec:
+  type: pubsub.kafka
+  version: v1
+  metadata:
+  - name: brokers
+    value: "localhost:9092"
+  - name: consumerGroup
+    value: "{appID}"
+  - name: consumerID
+    value: "{podName}"
+  - name: clientID
+    value: "{appID}"
+  - name: authType
+    value: "password"
+  - name: saslUsername
+    secretKeyRef:
+      name: kafka-api-key
+      key:  KAFKA-API-KEY
+  - name: saslPassword
+    secretKeyRef:
+      name: kafka-api-secret
+      key:  KAFKA-API-SECRET
+  - name: saslMechanism
+    value: "PLAINTEXT"
+  - name: initialOffset
+    value: "newest"
+auth:
+  secretStore: kubernetes

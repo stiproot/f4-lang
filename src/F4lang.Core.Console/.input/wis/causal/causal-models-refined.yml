@@ -1,0 +1,99 @@
+- epic:
+    - title: Causal AI Simulations on All Models
+    - description: Our Causal AI should be able to simulate player behavior and determine the best incentive based on scoring for all our production models.
+        - features:
+            - feature:
+                - title: Player Experience Simulations & Missing Data
+                - description: 
+                - user_stories:
+                    - user_story:
+                        - title: Problem definition
+                    - user_story:
+                        - title: Define player subpopulations
+                    - user_story:
+                        - title: Data acquisition
+                        - tasks:
+                            - task:
+                                - title: Registration data
+                            - task:
+                                - title: Missing data
+                            - task:
+                                - title: Random prize data
+                            - task:
+                                - title: Promotional pots data
+                    - user_story:
+                        - title: Data cleaning and feature engineering
+                    - user_story:
+                        - title: DAG design
+                    - user_story:
+                        - title: Model training
+                    - user_story:
+                        - title: Evaluation of causal results
+            - feature:
+                - title: 1st Deposit Simulations
+                - description: 
+                - user_stories:
+                    - user_story:
+                        - title: Problem definition
+                    - user_story:
+                        - title: Define player subpopulations
+                    - user_story:
+                        - title: Data acquisition
+                    - user_story:
+                        - title: Data cleaning and feature engineering
+                    - user_story:
+                        - title: DAG design
+                    - user_story:
+                        - title: Model training
+                    - user_story:
+                        - title: Evaluation of causal results
+            - feature:
+                - title: Insession Deposit Simulations
+                - description: 
+                - user_stories:
+                    - user_story:
+                        - title: Problem definition
+                    - user_story:
+                        - title: Define player subpopulations
+                    - user_story:
+                        - title: Data acquisition
+                    - user_story:
+                        - title: Data cleaning and feature engineering
+                    - user_story:
+                        - title: DAG design
+                    - user_story:
+                        - title: Model training
+                    - user_story:
+                        - title: Evaluation of causal results
+            - feature:
+                - title: TLIS Simulations
+                - description: 
+                - user_stories:
+                    - user_story:
+                        - title: Problem definition
+                    - user_story:
+                        - title: Define player subpopulations
+                    - user_story:
+                        - title: Data acquisition
+                    - user_story:
+                        - title: Data cleaning and feature engineering
+                    - user_story:
+                        - title: DAG design
+                    - user_story:
+                        - title: Model training
+                    - user_story:
+                        - title: Evaluation of causal results
+            - feature:
+                - title: Simulation Service
+                - description: Design a service to easily run simulation or add it to the deployment pipelines, this would include a pre and post production monitoring services
+                - user_stories:
+                    - user_story:
+                        - title: Problem Statement
+                    - user_story:
+                        - title: Solution Design
+                    - user_story:
+                        - title: Build & Test
+                    - user_story:
+                        - title: User Acceptance Testing
+                    - user_story:
+                        - title: Deploy

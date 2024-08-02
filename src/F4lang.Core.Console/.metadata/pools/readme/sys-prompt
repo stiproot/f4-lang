@@ -1,0 +1,170 @@
+I would like a README.md file created for for an cli application.
+The name of the appication is `F4lang`.
+It is written in C# and built on the .NET8 framework.
+It contains modules for orchestrating the interation between `agnts`, which are specialized system-prompt managers.
+
+Agnt Managers are the orchestrators for a particular agnt.
+Agnt maanagers are run in `pools`. The entry point is the `leader` agnt manager.
+Agnt managers can subscribe to the events of other agnts, which allow them to act in an asynchronous fashion.
+
+Here is an example of a pool configuration:
+```json
+{
+    'agntPoolId': 'promise-tree-pool',
+    'leaderAgntId': 'mermaid-architect',
+    'agnts': [
+        {
+            'agntId': 'mermaid-architect',
+            'metafile': '.json/mermaid-architect.meta.json'
+        },
+        {
+            'agntId': 'dev',
+            'metafile': '.json/promise-tree-dev.meta.json'
+        },
+        {
+            'agntId': 'code-validator',
+            'metafile': '.json/code-validator.meta.json'
+        }
+    ]
+}
+```
+Along with the specific agnt configurations:
+mermaid-architect
+```json
+{
+    'id': 'mermaid-architect',
+    'sysPrompts': [
+        'You are a collaborative agnt that forms part of a team.',
+        'You are the solutions architect in the team.',
+        'Your job is to produce a C4 component diagram in the Mermaid UML scripting language.',
+        'Use the `IO_READ_VECTOR_STORE` agnt tool function to find a C4 component diagram reference.',
+        'Write your output to a .md file on disk at this location `~/f4lang/src/F4lang.Console/.output/` using the `IO_WRITE_DISK` agnt tool function.',
+        'Provide the `dev` agnt with your output file by invoking the `AGENT_QRY` agnt tool function.'
+    ],
+    'fns': [
+        {
+        'fnName': 'AGENT_QRY',
+        'fnDesc': 'Agnt tool function to request that an agnt perform a task.'
+        },
+        {
+        'fnName': 'IO_READ_CONSOLE',
+        'fnDesc': 'Agnt tool function to request additional information from the user.'
+        },
+        {
+        'fnName': 'IO_READ_VECTOR_STORE',
+        'fnDesc': 'Agnt tool function to query a vector store for information.'
+        },
+        {
+        'fnName': 'IO_WRITE_DISK',
+        'fnDesc': 'Agnt tool function to write content to a file on disk.'
+        }
+    ],
+    'agnts': [
+        {
+        'agntId': 'dev',
+        'agntDesc': 'An coding agnt specialized in implimenting a solution.'
+        }
+    ],
+    'collections': [ 
+        {
+        'collName': 'mermaid',
+        'collDesc': 'Mermaid UML scripting language reference.'
+        }
+    ],
+    'agntBaseType': 'OPEN_AI',
+    'maxTokens': 5500,
+    'temperature': 0.8
+}
+```
+
+promise-tree-dev
+```json
+{
+    'id': 'promise-tree-dev',
+    'sysPrompts': [
+        'You are a C# and .NET specialist.',
+        'You receive design blueprints in the form of Mermaid UML scripts.',
+        'You job is to write C# code that implements the design.',
+        'Your job is to use `PromiseTree` for all orchestration that is required.',
+        'All classes and interfaces can be outlined in a single file.',
+        'Assume that the PromiseTree .NET package is included in the code bases you are writing code for.',
+        'You only need to output C#; do not worry about explaining your code.', 
+        '**Use the 'IO_READ_VECTOR_STORE' function to get information about the PromiseTree library ('promise-tree' collection).**'
+    ],
+    'fns': [
+        {
+            'fnName': 'IO_READ_VECTOR_STORE',
+            'fnDesc': 'Query a vector store.'
+        },
+        {
+            'fnName': 'IO_READ_DISK',
+            'fnDesc': 'Read content from a file on disk.'
+        },
+        {
+            'fnName': 'IO_WRITE_DISK',
+            'fnDesc': 'Write content to a file on disk.'
+        }
+    ],
+    'agnts': [ ],
+    'collections': [ 
+        {
+            'collName': 'promise-tree',
+            'collDesc': 'PromiseTree library reference material.'
+        }
+    ],
+    'subs': [
+        {
+            'agntId': 'code-validator',
+            'agntDesc': 'An agnt that validates C# code.'
+        }
+    ],
+    'agntBaseType': 'OPEN_AI',
+    'maxTokens': 3500,
+    'temperature': 0.8
+}   
+```
+
+code-validator
+```json
+{
+    'id': 'code-validator',
+    'sysPrompts': [
+        'You are a C# and .NET code validator.',
+        'Your job is to validate that C# code compiles.',
+        'If the code does not compile, ask the `dev` agnt to fix it, and provide the compiler output.'
+    ],
+    'fns': [
+        {
+            'fnName': 'AGENT_QRY',
+            'fnDesc': 'Request that an agnt perform a task.'
+        },
+        {
+            'fnName': 'IO_READ_DISK',
+            'fnDesc': 'Read content from a file on disk.'
+        },
+        {
+            'fnName': 'IO_WRITE_DISK',
+            'fnDesc': 'Write content to a file on disk.'
+        }
+    ],
+    'agnts': [
+        {
+            'agntId': 'dev',
+            'agntDesc': 'An coding agnt specialized in implimenting a solution.'
+        }
+    ],
+    'collections': [ 
+        {
+            'collName': 'promise-tree',
+            'collDesc': 'PromiseTree library reference material.'
+        }
+    ],
+    'agntBaseType': 'OPEN_AI',
+    'maxTokens': 3500,
+    'temperature': 0.8
+}
+```
+
+Please add the above samples to the README, as well as to diagram the above architecture descirbed using a C4 compoment diagram in Mermaid.
+
+The README.md file must be written to the following location `~/f4lang/src/F4lang.Console/.output/`.

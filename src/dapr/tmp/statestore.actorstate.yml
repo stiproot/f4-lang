@@ -1,0 +1,18 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: actorstate
+spec:
+  type: state.couchbase
+  version: v1
+  metadata:
+  - name: couchbaseURL
+    value: "http://localhost:8091"
+  - name: username
+    value: "root"
+  - name: password
+    value: "R007__.."
+  - name: bucketName
+    value: "f4lang"
+  - name: actorStateStore
+    value: true

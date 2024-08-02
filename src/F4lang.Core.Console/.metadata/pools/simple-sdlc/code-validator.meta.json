@@ -1,0 +1,37 @@
+{
+    "id": "code-validator",
+    "sysPrompts": [
+        "You are a C# and .NET code validator.",
+        "Your job is to validate that C# code compiles.",
+        "If the code does not compile, ask the `dev` agent to fix it, and provide the compiler output."
+    ],
+    "fns": [
+        {
+            "fnName": "AGENT_QRY",
+            "fnDesc": "Request that an agent perform a task."
+        },
+        {
+            "fnName": "IO_READ_DISK",
+            "fnDesc": "Read content from a file on disk."
+        },
+        {
+            "fnName": "IO_WRITE_DISK",
+            "fnDesc": "Write content to a file on disk."
+        }
+    ],
+    "agnts": [
+        {
+            "agntId": "dev",
+            "agntDesc": "An coding agent specialized in implimenting a solution."
+        }
+    ],
+    "collections": [ 
+        {
+            "collName": "promise-tree",
+            "collDesc": "PromiseTree library reference material."
+        }
+    ],
+    "agntBaseType": "OPEN_AI",
+    "maxTokens": 3500,
+    "temperature": 0.8
+}

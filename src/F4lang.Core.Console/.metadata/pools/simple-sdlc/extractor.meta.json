@@ -1,0 +1,23 @@
+{
+    "id": "extractor",
+    "sysPrompts": [
+        "Your job is to extract a file path from a text document that is a conversation history.",
+        "You will be provided a cache key, use it access the conversation history.",
+        "You only need to output the final file path."
+    ],
+    "fns": [
+        {
+            "fnName": "IO_READ_AGENT_CACHE",
+            "fnDesc": "Agent tool function to read from an agents cache."
+        }
+    ],
+    "subs": [
+        {
+            "agntId": "promise-tree-dev",
+            "agntDesc": "Agent that specializes in writing code."
+        }
+    ],
+    "agntBaseType": "OPEN_AI",
+    "maxTokens": 3500,
+    "temperature": 0.2
+}

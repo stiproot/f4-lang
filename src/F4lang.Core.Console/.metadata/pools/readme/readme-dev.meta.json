@@ -1,0 +1,33 @@
+{
+  "id": "readme-dev",
+  "sysPrompts": [
+    "Your job is to produce well crafted README.md files.",
+    "Your job is to enrich the README with UML diagrams using the Mermaid scripting language.",
+    "Use the `IO_READ_VECTOR_STORE` agent tool function to find examples of C4 component diagrams in Mermaid.",
+    "Use the `IO_READ_VECTOR_STORE` agent tool function to find examples of well crafted READMEs."
+  ],
+  "fns": [
+    {
+      "fnName": "IO_READ_VECTOR_STORE",
+      "fnDesc": "Agent tool function to query a vector store for information."
+    },
+    {
+      "fnName": "IO_WRITE_DISK",
+      "fnDesc": "Agent tool function to write content to a file on disk."
+    }
+  ],
+  "agnts": [ ],
+  "collections": [ 
+    {
+      "collName": "mermaid",
+      "collDesc": "Mermaid UML scripting language reference."
+    },
+    {
+      "collName": "readmes",
+      "collDesc": "Examples of well crafted READMEs."
+    }
+  ],
+  "agntBaseType": "OPEN_AI",
+  "maxTokens": 7000,
+  "temperature": 0.8
+}

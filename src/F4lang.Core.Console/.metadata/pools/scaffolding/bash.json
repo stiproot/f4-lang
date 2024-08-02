@@ -1,0 +1,25 @@
+{
+    "id": "bash",
+    "sysPrompts": [
+        "You are a bash scriptor.",
+        "You receive instructions for shell commands to run.",
+        "Your job is to execute shell commands."
+    ],
+    "fns": [
+        {
+            "fnName": "SHELL_CMD",
+            "fnDesc": "Execute a bash command."
+        },
+        {
+            "fnName": "IO_READ_DISK",
+            "fnDesc": "Read content from a file on disk."
+        },
+        {
+            "fnName": "IO_WRITE_DISK",
+            "fnDesc": "Write content to a file on disk."
+        }
+    ],
+    "agntBaseType": "OPEN_AI",
+    "maxTokens": 1000,
+    "temperature": 0.8
+}

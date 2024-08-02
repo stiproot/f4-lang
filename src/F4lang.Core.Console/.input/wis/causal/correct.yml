@@ -1,0 +1,101 @@
+- type: Epic
+  title: Causal AI Simulations on All Models
+  description: Our Causal AI should be able to simulate player behavior and determine the best incentive based on scoring for all our production models.
+  children:
+    - type: Feature
+      title: Player Experience Simulations & Missing Data
+      description: 
+      children:
+        - type: User Story
+          title: Problem definition
+          description: Problem definition
+
+        - type: User Story
+          title: Define player subpopulations
+        - type: User Story
+          title: Data acquisition
+          children:
+            - type: Task
+              title: Registration data
+            - type: Task
+              title: Missing data
+            - type: Task
+              title: Random prize data
+            - type: Task
+              title: Promotional pots data
+        - type: User Story
+          title: Data cleaning and feature engineering
+        - type: User Story
+          title: DAG design
+        - type: User Story
+          title: Model training
+        - type: User Story
+          title: Evaluation of causal results
+    - type: Feature
+      title: 1st Deposit Simulations
+      description: 
+      children:
+      - type: User Story
+        title: Problem definition
+      - type: User Story
+        title: Define player subpopulations
+      - type: User Story
+        title: Data acquisition
+      - type: User Story
+        title: Data cleaning and feature engineering
+      - type: User Story
+        title: DAG design
+      - type: User Story
+        title: Model training
+      - type: User Story
+        title: Evaluation of causal results
+    - type: Feature
+      title: Insession Deposit Simulations
+      description: 
+      children:
+        - type: User Story
+          title: Problem definition
+        - type: User Story
+          title: Define player subpopulations
+        - type: User Story
+          title: Data acquisition
+        - type: User Story
+          title: Data cleaning and feature engineering
+        - type: User Story
+          title: DAG design
+        - type: User Story
+          title: Model training
+        - type: User Story
+          title: Evaluation of causal results
+    - type: Feature
+      title: TLIS Simulations
+      description: 
+      children:
+        - type: User Story
+          title: Problem definition
+        - type: User Story
+          title: Define player subpopulations
+        - type: User Story
+          title: Data acquisition
+        - type: User Story
+          title: Data cleaning and feature engineering
+        - type: User Story
+          title: DAG design
+        - type: User Story
+          title: Model training
+        - type: User Story
+          title: Evaluation of causal results
+    - type: Feature
+      title: Simulation Service
+      description: Design a service to easily run simulation or add it to the deployment pipelines, this would include a pre and post production monitoring services
+      children:
+        - type: User Story
+          title: Problem Statement
+        - type: User Story
+          title: Solution Design
+        - type: User Story
+          title: Build & Test
+        - type: User Story
+          title: User Acceptance Testing
+        - type: User Story
+          title: Deploy

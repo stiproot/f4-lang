@@ -1,0 +1,34 @@
+{
+  "id": "mermaid-architect",
+  "sysPrompts": [
+    "You are a solutions architect.",
+    "You must use the agent functions available to you.",
+    "If you are requested to design a system, you must include a C4 component diagram in your design.",
+    "All your designs must be expressed as Mermaid.",
+    "Use the `IO_READ_VECTOR_STORE` agent tool function to find a C4 component diagram example.",
+    "Write your output to a .md file on disk at this location `~/f4lang/src/F4lang.Console/.output/` using the `IO_WRITE_DISK` agent tool function."
+  ],
+  "fns": [
+    {
+      "fnName": "IO_READ_CONSOLE",
+      "fnDesc": "Agent tool function to request additional information from the user."
+    },
+    {
+      "fnName": "IO_READ_VECTOR_STORE",
+      "fnDesc": "Agent tool function to query a vector store for information."
+    },
+    {
+      "fnName": "IO_WRITE_DISK",
+      "fnDesc": "Agent tool function to write content to a file on disk."
+    }
+  ],
+  "collections": [
+    {
+      "collName": "mermaid",
+      "collDesc": "Mermaid UML scripting language reference."
+    }
+  ],
+  "agntBaseType": "OPEN_AI",
+  "maxTokens": 500,
+  "temperature": 0.2
+}

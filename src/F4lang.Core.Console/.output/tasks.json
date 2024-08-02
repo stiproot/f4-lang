@@ -1,0 +1,107 @@
+[
+  {
+    "type": "Task",
+    "area_path": "Software\\Integrated Solutions, Sports and AI\\Artificial Intelligence\\Project\\Cyberdyne Project Team",
+    "iteration_path": "Software\\Non-Aligned\\Integrated Solutions, Sports and AI\\Teams\\Cyberdyne Project Team",
+    "title": "Problem statement meeting",
+    "description": "",
+    "state": "New",
+    "tags": "PromoMan-Models",
+    "assigned_to": "",
+    "children": [],
+    "relation": {
+      "relation_type": "Child",
+      "url": "https://dev.azure.com/Derivco/Software/_workitems/edit/1210866"
+    }
+  },
+  {
+    "type": "Task",
+    "area_path": "Software\\Integrated Solutions, Sports and AI\\Artificial Intelligence\\Project\\Cyberdyne Project Team",
+    "iteration_path": "Software\\Non-Aligned\\Integrated Solutions, Sports and AI\\Teams\\Cyberdyne Project Team",
+    "title": "Identify relevant tables",
+    "description": "",
+    "state": "New",
+    "tags": "PromoMan-Models",
+    "assigned_to": "",
+    "children": [],
+    "relation": {
+      "relation_type": "Child",
+      "url": "https://dev.azure.com/Derivco/Software/_workitems/edit/1210866"
+    }
+  },
+  {
+    "type": "Task",
+    "area_path": "Software\\Integrated Solutions, Sports and AI\\Artificial Intelligence\\Project\\Cyberdyne Project Team",
+    "iteration_path": "Software\\Non-Aligned\\Integrated Solutions, Sports and AI\\Teams\\Cyberdyne Project Team",
+    "title": "Create temp tables for required data",
+    "description": "",
+    "state": "New",
+    "tags": "PromoMan-Models",
+    "assigned_to": "",
+    "children": [],
+    "relation": {
+      "relation_type": "Child",
+      "url": "https://dev.azure.com/Derivco/Software/_workitems/edit/1210866"
+    }
+  },
+  {
+    "type": "Task",
+    "area_path": "Software\\Integrated Solutions, Sports and AI\\Artificial Intelligence\\Project\\Cyberdyne Project Team",
+    "iteration_path": "Software\\Non-Aligned\\Integrated Solutions, Sports and AI\\Teams\\Cyberdyne Project Team",
+    "title": "Initial data exploration",
+    "description": "",
+    "state": "New",
+    "tags": "PromoMan-Models",
+    "assigned_to": "",
+    "children": [],
+    "relation": {
+      "relation_type": "Child",
+      "url": "https://dev.azure.com/Derivco/Software/_workitems/edit/1210866"
+    }
+  },
+  {
+    "type": "Task",
+    "area_path": "Software\\Integrated Solutions, Sports and AI\\Artificial Intelligence\\Project\\Cyberdyne Project Team",
+    "iteration_path": "Software\\Non-Aligned\\Integrated Solutions, Sports and AI\\Teams\\Cyberdyne Project Team",
+    "title": "Identify and analyse high level features",
+    "description": "",
+    "state": "New",
+    "tags": "PromoMan-Models",
+    "assigned_to": "",
+    "children": [],
+    "relation": {
+      "relation_type": "Child",
+      "url": "https://dev.azure.com/Derivco/Software/_workitems/edit/1210866"
+    }
+  },
+  {
+    "type": "Task",
+    "area_path": "Software\\Integrated Solutions, Sports and AI\\Artificial Intelligence\\Project\\Cyberdyne Project Team",
+    "iteration_path": "Software\\Non-Aligned\\Integrated Solutions, Sports and AI\\Teams\\Cyberdyne Project Team",
+    "title": "Explore different formulations of the target",
+    "description": "",
+    "state": "New",
+    "tags": "PromoMan-Models",
+    "assigned_to": "",
+    "children": [],
+    "relation": {
+      "relation_type": "Child",
+      "url": "https://dev.azure.com/Derivco/Software/_workitems/edit/1210866"
+    }
+  },
+  {
+    "type": "Task",
+    "area_path": "Software\\Integrated Solutions, Sports and AI\\Artificial Intelligence\\Project\\Cyberdyne Project Team",
+    "iteration_path": "Software\\Non-Aligned\\Integrated Solutions, Sports and AI\\Teams\\Cyberdyne Project Team",
+    "title": "Problem statement meeting",
+    "description": "",
+    "state": "New",
+    "tags": "PromoMan-Models",
+    "assigned_to": "",
+    "children": [],
+    "relation": {
+      "relation_type": "Child",
+      "url": "https://dev.azure.com/Derivco/Software/_workitems/edit/1210866"
+    }
+  }
+]

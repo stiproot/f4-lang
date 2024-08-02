@@ -1,0 +1,12 @@
+- epic:
+    - title: Causal AI Simulations on All Models
+    - description: Our Causal AI should be able to simulate player behavior and determine the best incentive based on scoring for all our production models.
+        - features:
+            - feature:
+                - title: Player Experience Simulations & Missing Data
+                - description: 
+                - user_stories:
+                    - user_story:
+                        - title: Problem definition
+                    - user_story:
+                        - title: Define player subpopulations

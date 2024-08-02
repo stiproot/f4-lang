@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "b1b12b97-218b-4de6-a09f-8563f413504b",
+		"name": "f4lang",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9729201"
+	},
+	"item": [
+		{
+			"name": "create agnt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"agntId\": \"promise-tree-dev\",\n    \"sysPrompts\": [\n        \"You are a C# developer.\",\n        \"Your job is to implement the user requirements.\",\n        \"All classes and interfaces can be outlined in a single file.\",\n        \"You only need to output C#; do not worry about explaining your code.\"\n    ],\n    \"fns\": [\n        {\n            \"fnName\": \"IO_READ_VECTOR_STORE\",\n            \"fnDesc\": \"Query a vector store for additional information.\"\n        },\n        {\n            \"fnName\": \"IO_READ_DISK\",\n            \"fnDesc\": \"Read content from a file on disk.\"\n        },\n        {\n            \"fnName\": \"IO_WRITE_DISK\",\n            \"fnDesc\": \"Write content to a file on disk.\"\n        }\n    ],\n    \"collections\": [\n        {\n            \"collName\": \"promise-tree\",\n            \"collDesc\": \"PromiseTree .NET library documentation.\"\n        }\n    ],\n    \"contexts\": [\n        {\n            \"collName\": \"promise-tree-dotnet-library\",\n            \"collQryHint\": \"What is the PromiseTree .NET library?\",\n            \"collDesc\": \"PromiseTree .NET library documentation.\"\n        }\n    ],\n    \"agntBaseType\": \"OPEN_AI\",\n    \"maxTokens\": 1000,\n    \"temperature\": 0.3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5079/agnts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5079",
+					"path": [
+						"agnts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "qry agnt pool",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"usrQry\": \"I would like a Web API, that consists of a single endpoint, that accepts a POST request. The endpoint will return a weather forecast, that is stored in a database. Use SOLID principles.The code must be written to the following file `~/f4lang/src/F4lang.Console/output/weather.cs`.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5079/agnts/pools/promise-tree-pool/qry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5079",
+					"path": [
+						"agnts",
+						"pools",
+						"promise-tree-pool",
+						"qry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get agnt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5079/agnt/promise-tree-dev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5079",
+					"path": [
+						"agnt",
+						"promise-tree-dev"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get agnts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5079/agnts/promise-tree-dev,promise-tree-dev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5079",
+					"path": [
+						"agnts",
+						"promise-tree-dev,promise-tree-dev"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get agnt pool",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5079/agnts/pools/promise-tree-pool",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5079",
+					"path": [
+						"agnts",
+						"pools",
+						"promise-tree-pool"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create agnt pool",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"agntPoolId\": \"promise-tree-pool\",\n    \"leaderAgntId\": \"promise-tree-dev\",\n    \"agnts\": [\n        {\n            \"agntId\": \"promise-tree-dev\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5079/agnts/pools",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5079",
+					"path": [
+						"agnts",
+						"pools"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

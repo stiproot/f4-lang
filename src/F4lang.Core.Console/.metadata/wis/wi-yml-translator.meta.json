@@ -1,0 +1,33 @@
+{
+  "id": "wi-yml-translator",
+  "sysPrompts": [
+    "You are a helpful Work Item Translator bot.",
+    "You must use the agent functions available to you.",
+    "Use the `IO_READ_VECTOR_STORE` agent tool function to find an example of the type of translation that needs to be done.",
+    "Write your output to a .yml file on disk at the location provided to you."
+  ],
+  "fns": [
+    {
+      "fnName": "IO_READ_VECTOR_STORE",
+      "fnDesc": "Agent tool function to query a vector store for information."
+    },
+    {
+      "fnName": "IO_READ_DISK",
+      "fnDesc": "Read content from a file on disk."
+    },
+    {
+      "fnName": "IO_WRITE_DISK",
+      "fnDesc": "Agent tool function to write content to a file on disk."
+    }
+  ],
+  "contexts": [ 
+    {
+      "collName": "wi-yml-translation-examples",
+      "collQryHint": "simple work item formatting",
+      "collDesc": "Examples of work item translations."
+    }
+  ],
+  "agntBaseType": "OPEN_AI",
+  "maxTokens": 3000,
+  "temperature": 0.2
+}

@@ -1,0 +1,101 @@
+epic: MLDLC Template
+  - feature: Pre-deployment impact analysis and model sign-off
+        - description: |
+            Simulate production interventions on the development sense, analyse the impact of the model and sign-off on the model if all in order.
+        
+        - story: Simulate impact
+          - description: |
+              Simulate the impact of the model in production by predicting on the development sample and implementing the same interventions that will be implemented in production. 
+              Observe if the metric of interest is impacted and if the model is performing as expected outside of a statistical sense.
+          - acceptance_criteria: |
+              Simluation analysis complete, 
+              Anlysis insights documented, shared and discussed
+          - points: 5
+          - tags: PromoMan-Models
+
+        - story: Model sign-off
+          - description: The model is signed off and deemed as final, thus ready for deployment.
+          - acceptance_criteria: Model signed off
+          - points: 1
+          - tags: PromoMan-Models
+
+  - feature: Model deployment
+        - description: |
+            Deploy the model using the agreed upon deployment process. 
+            The model is available for consumption but is not yet in production and is not yet used to make decisions.
+        
+        - story: Create scoring function
+          - description: Transform development code into a scoring function that can be used to score new data in production.
+          - acceptance_criteria: Scoring function created
+          - points: 2
+          - tags: PromoMan-Models
+
+        - story: Test scoring function using unit tests
+          - description: |
+              Evaluate the scoring function using unit tests.
+              Ensure that the scoring function is working as expected and producing the same result as observed during development.
+          - acceptance_criteria: |
+              Scoring function unit tests reviewed,
+              Tests passing
+          - points: 2
+          - tags: PromoMan-Models
+
+        - story: Register scoring function and model
+          - description: Register the scoring function and model for consumption.
+          - acceptance_criteria: Scoring function and model registered
+          - points: 2
+          - tags: PromoMan-Models
+        
+  - feature: Post-deployment impact analysis
+        - description: |
+            After the model has been deployed, analyse the results of the model by performing AB testing.
+            Compare the results to the simulation results. 
+            This is to ensure that the model is performing as expected in production and that the model is not performing differently in production than in development. 
+            Determine if the model uplifts the metric of interest and if it is statistical significant.
+        
+        - story: Design AB test scenario
+          - description: |
+              Create the AB test scenario that will be used to compare the model results to the simulation results. 
+              Allocate the required sample sizes to the test and control groups and monitor the pre-defined metrics of interest. 
+              Determine the adequate sample size required, duration the experiment should run for and the cost associated.
+          - acceptance_criteria: Ab test created and actively running
+          - points: 2
+          - tags: PromoMan-Models
+
+        - story: Analyse AB test results
+          - description: | 
+              Analyse the results of the AB test and determine if the model is performing as expected in production. 
+              Determine if the model uplifts the metric of interest and if it is statistical significant.
+          - acceptance_criteria: |
+              Analysis complete, 
+              Insights documented, shared and discussed
+          - points: 5
+          - tags: PromoMan-Models
+
+        - story: Enable production scoring
+          - description: |
+              If and once the AB tests results are satisfactory, enable the model to score in production using the pre-determined percentage of traffic.
+          - acceptance_criteria: Scoring function and model registered
+          - points: 1
+          - tags: PromoMan-Models
+
+  - feature: Monitoring and maintenance
+        - description: After the model is deployed to production perform adequate monitoring and maintenance
+        
+        - story: Monitoring metrics defined and reports created
+          - description: |
+              Define the metrics that will be monitored and create the reports that will be used to monitor the model performance. 
+              Ensure that the reports are available to the relevant stakeholders and that both the model and its features are being monitored. 
+              Setup alerting where required.
+          - acceptance_criteria: Monitoring reports created and available
+          - points: 3
+          - tags: PromoMan-Models
+
+        - story: Actively monitor and maintain model
+          - description: |
+              Monitor the model and maintain where needed during time in production. 
+              Ensure that the model is performing as expected and that the model is not degrading over time. 
+              Ensure that the input features are stable and not drifting over time.
+          - acceptance_criteria: Active monitoring
+          - points: 1
+          - tags: PromoMan-Models

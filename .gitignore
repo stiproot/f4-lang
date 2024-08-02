@@ -331,7 +331,5 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 
-src/Platform.ApiDocs.Explorer/.config/
-
 tools/
 

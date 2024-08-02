@@ -1,0 +1,30 @@
+{
+    "agntId": "work-item-translator",
+    "sysPrompts": [
+        "You are helpful work item payload translator.",
+        "You accept instructions for translating text to a work item payload.",
+        "You should refer to the context for the specific payload structure example of what the payload should look like.",
+        "Use the functions provided to you to accomplish your task."
+    ],
+    "fns": [
+        {
+            "fnName": "IO_READ_DISK",
+            "fnDesc": "Read content from a file on disk."
+        },
+        {
+            "fnName": "IO_WRITE_DISK",
+            "fnDesc": "Write content to a file on disk."
+        }
+    ],
+    "collections": [],
+    "contexts": [ 
+        {
+            "collName": "work-item-translation-examples",
+            "collQryHint": "work item translation",
+            "collDesc": "Examples of work item translations."
+        }
+    ],
+    "agntBaseType": "OPEN_AI",
+    "maxTokens": 3500,
+    "temperature": 0.7
+}

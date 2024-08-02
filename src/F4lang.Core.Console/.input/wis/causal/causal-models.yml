@@ -1,0 +1,47 @@
+- Causal AI Simulations on All Models:
+    Description: Our Causal AI should be able to simulate player behavior and determine the best incentive based on scoring for all our production models.
+    Milestones:
+      - Player Experience Simulations & Missing Data:
+          - Problem definition
+          - Define player subpopulations
+          - Data acquisition:
+              - Registration data
+              - Missing data
+              - Random prize data
+              - Promotional pots data
+          - Data cleaning and feature engineering
+          - DAG design
+          - Model training
+          - Evaluation of causal results
+      - 1st Deposit Simulations:
+          - Problem definition
+          - Define player subpopulations
+          - Data acquisition
+          - Data cleaning and feature engineering
+          - DAG design
+          - Model training
+          - Evaluation of causal results
+      - Insession Deposit Simulations:
+          - Problem definition
+          - Define player subpopulations
+          - Data acquisition
+          - Data cleaning and feature engineering
+          - DAG design
+          - Model training
+          - Evaluation of causal results
+      - TLIS Simulations:
+          - Problem definition
+          - Define player subpopulations
+          - Data acquisition
+          - Data cleaning and feature engineering
+          - DAG design
+          - Model training
+          - Evaluation of causal results
+      - Simulation Service:
+          Description: Design a service to easily run simulation or add it to the deployment pipelines, this would include a pre and post production monitoring services
+          Milestones:
+            - Problem Statement
+            - Solution Design
+            - Build & Test
+            - User Acceptance Testing
+            - Deploy

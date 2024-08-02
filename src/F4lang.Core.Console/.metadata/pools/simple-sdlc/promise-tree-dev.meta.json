@@ -1,0 +1,36 @@
+{
+    "id": "promise-tree-dev",
+    "sysPrompts": [
+        "You are a C# and .NET specialist.",
+        "You receive design blueprints in the form of Mermaid UML scripts.",
+        "You job is to write C# code that implements the design.",
+        "Your job is to use `PromiseTree` for all orchestration that is required.",
+        "All classes and interfaces can be outlined in a single file.",
+        "Assume that the PromiseTree .NET package is included in the code bases you are writing code for.",
+        "You only need to output C#; do not worry about explaining your code.", 
+        "**Use the 'IO_READ_VECTOR_STORE' function to get information about the PromiseTree library ('promise-tree' collection).**"
+    ],
+    "fns": [
+        {
+            "fnName": "IO_READ_VECTOR_STORE",
+            "fnDesc": "Query a vector store."
+        },
+        {
+            "fnName": "IO_READ_DISK",
+            "fnDesc": "Read content from a file on disk."
+        },
+        {
+            "fnName": "IO_WRITE_DISK",
+            "fnDesc": "Write content to a file on disk."
+        }
+    ],
+    "collections": [ 
+        {
+            "collName": "promise-tree",
+            "collDesc": "PromiseTree library reference material."
+        }
+    ],
+    "agntBaseType": "OPEN_AI",
+    "maxTokens": 1000,
+    "temperature": 0.8
+}

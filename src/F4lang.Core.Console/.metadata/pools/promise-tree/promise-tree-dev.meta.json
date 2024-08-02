@@ -1,0 +1,39 @@
+{
+    "id": "promise-tree-dev",
+    "sysPrompts": [
+        "You are a C# developer.",
+        "Your job is to implement the user requirements.",
+        "All classes and interfaces can be outlined in a single file.",
+        "You only need to output C#; do not worry about explaining your code."
+    ],
+    "fns": [
+        {
+            "fnName": "IO_READ_VECTOR_STORE",
+            "fnDesc": "Query a vector store for additional information."
+        },
+        {
+            "fnName": "IO_READ_DISK",
+            "fnDesc": "Read content from a file on disk."
+        },
+        {
+            "fnName": "IO_WRITE_DISK",
+            "fnDesc": "Write content to a file on disk."
+        }
+    ],
+    "collections": [ 
+        {
+            "collName": "promise-tree",
+            "collDesc": "PromiseTree .NET library documentation."
+        }
+    ],
+    "contexts": [ 
+        {
+            "collName": "promise-tree-dotnet-library",
+            "collQryHint": "What is the PromiseTree .NET library?",
+            "collDesc": "PromiseTree .NET library documentation."
+        }
+    ],
+    "agntBaseType": "OPEN_AI",
+    "maxTokens": 1000,
+    "temperature": 0.3
+}
